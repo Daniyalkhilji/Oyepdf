@@ -1,0 +1,34 @@
+<html>
+    <body>
+        {% csrf_token %}
+        <form action="/pdf" method="post" enctype="multipart/form-data">
+            <label for="pdf-file">Select a PDF file:</label>
+            <input type="file" id="pdf-file" name="pdf-file"><br><br>
+            <label for="page-size">Select a page size:</label><br>
+            <input type="radio" id="small" name="page-size" value="200,150" checked>
+            <label for="small">Small (200 X 150)</label><br>
+            <input type="radio" id="medium" name="page-size" value="279,216">
+            <label for="medium">Medium (279 X 216)</label><br>
+            <input type="radio" id="large" name="page-size" value="350,280">
+            <label for="large">Large (350 X 280)</label><br>
+            <label for="custom-size">Or enter custom size:</label><br>
+            <label for="page-width">Page Width:</label>
+            <input type="text" id="page-width" name="page-width"><br>
+            <label for="page-height">Page Height:</label>
+            <input type="text" id="page-height" name="page-height"><br><br>
+            <label for="material-selection">Select a Material:</label><br>
+            <input type="radio" id="metalized-plastic" name="material" value="metalized-plastic" checked>
+            <label for="metalized-plastic">Metalized Plastic</label><br>
+            <input type="radio" id="transparent-plastic" name="material" value="transparent-plastic">
+            <label for="transparent-plastic">Transparent Plastic</label><br>
+            <input type="radio" id="white-paper" name="material" value="white-paper">
+            <label for="white-paper">White Paper</label><br><br>
+            <label for="decoration">Select a Decoration:</label><br>
+            <input type="checkbox" id="uv-layer" name="decoration[]" value="uv-layer">
+            <label for="uv-layer">UV Layer</label><br>
+            <input type="checkbox" id="lamination" name="decoration[]" value="lamination">
+            <label for="lamination">Lamination</label><br><br>
+            <input type="submit" value="Upload">
+        </form>          
+    </body>
+</html>

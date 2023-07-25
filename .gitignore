@@ -1,0 +1,25 @@
+# Ignore secret settings file
+/design_analyzer/settings.py
+
+# Ignore environment-specific settings file
+/design_analyzer/.env
+
+
+# Ignore media files
+/design_analyzer/media/
+
+# Ignore database file
+/design_analyzer/db.sqlite3
+
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+/design_analyzer/__pycache__
+/designAnalyzer/__pycache__
+
+# Ignore migration files
+/designAnalyzer/migrations/
+
+# Ignore virtual environment directory (if used)
+/venv/
+/env/

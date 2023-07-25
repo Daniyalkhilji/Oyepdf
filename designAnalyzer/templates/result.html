@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+    <h1>Result:</h1>
+    <ul>
+        {% for key, value in result.items %}
+            <li>{{ key }}: {{ value }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Parser Result</title>
+    <style>
+        /* CSS styles here */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PDF Parser Result</h1>
+
+        <!-- Print the result dictionary -->
+        <!-- {% for key, value in result.items %}
+            {% if value is dict %}
+                <h2>{{ key }}</h2>
+                {% for k, v in value.items %}
+                    {% if v is dict %}
+                        <h3>{{ k }}</h3>
+                        {% for nested_key, nested_value in v.items %}
+                            <p>{{ nested_key }}: {{ nested_value }}</p>
+                        {% endfor %}
+                    {% else %}
+                        <p>{{ k }}: {{ v }}</p>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <p>{{ key }}: {{ value }}</p>
+            {% endif %}
+        {% endfor %}
+    </div>
+</body>
+</html> --> -->
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Parser Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 36px;
+            color: #333;
+        }
+
+        h2 {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        p {
+            margin: 0;
+            font-size: 16px;
+            color: #666;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        li {
+            margin: 10px 0;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PDF Parser Result</h1>
+
+        {% if error %}
+            <p>{{ error }}</p>
+        {% else %}
+            <h2>Version</h2>
+            <p>Status: {{ result.version.status }}</p>
+            <p>Config min. version: {{ result.version.config_min_version }}</p>
+            <p>Artwork PDF version: {{ result.version.artwork_pdf_version }}</p>
+
+            <h2>Page Size</h2>
+            <p>Status: {{ result.page_size.status }}</p>
+            <p>Config width: {{ result.page_size.config_width }}, height: {{ result.page_size.config_height }}</p>
+            <p>Artwork width: {{ result.page_size.artwork_width }}, height: {{ result.page_size.artwork_height }}</p>
+
+            <h2>Text</h2>
+            <p>Status: {{ result.text.status }}</p>
+            <p>{% if result.text.text_found %}Text found in Artwork{% else %}No text found in Artwork{% endif %}</p>
+
+            <h2>Layers</h2>
+            <p>Status: {{ result.layers.status }}</p>
+            <p>Config mandatory layers: {{ result.layers.config_layers }}</p>
+            <p>Detected layers:</p>
+            <ul>
+                {% for layer in result.layers.detected_layers %}
+                    <li>{{ layer }}</li>
+                {% endfor %}
+            </ul>
+
+            <h2>Images</h2>
+            <p>Total images: {{ result.images.total_images }}</p>
+            <ul>
+                {% for image in result.images.image_list %}
+                    <li>
+                        <h3>Image {{ image.image_number }}</h3>
+                        <p>Width: {{ image.width }} px</p>
+                        <p>Height: {{ image.height }} px</p>
+                        <p>Color mode: {{ image.colorspace }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <p>Processing time: {{ result.cost_time }} seconds</p>
+        {% endif %}
+    </div>
+</body>
+</html>
+-->

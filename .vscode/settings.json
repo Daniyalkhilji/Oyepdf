@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/464c3f7e-f0ff-49f2-a507-6e8e48791e5b/resourceGroups/Preziox/providers/Microsoft.Web/sites/Oyepdf",
+    "appService.deploySubpath": "."
+}
